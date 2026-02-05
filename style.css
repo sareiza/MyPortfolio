@@ -1,0 +1,123 @@
+/* 1. VARIABLES Y CONFIGURACIÓN BASE */
+:root {
+    --dark-bg: #0b0f19;
+    --card-bg: #161b22;
+    --neon-green: #2ecc71;
+    --text-main: #f0f6fc;
+    --text-muted: #8b949e;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif; /* Tipografía moderna */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+    scroll-padding-top: 90px; /* Evita que el menú tape los títulos al bajar */
+}
+
+/* 2. NAVBAR (MENÚ ESTÁTICO) */
+.navbar {
+    background-color: rgba(11, 15, 25, 0.95) !important;
+    backdrop-filter: blur(10px); /* Efecto cristal esmerilado */
+    border-bottom: 1px solid #30363d;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: var(--text-main) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--neon-green) !important;
+}
+
+/* 3. SECCIÓN HERO (INICIO) */
+.profile-img {
+    border-radius: 20px;
+    border: 3px solid var(--neon-green);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.text-green {
+    color: var(--neon-green);
+}
+
+.btn-green {
+    background-color: var(--neon-green);
+    color: #0b0f19;
+    font-weight: bold;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+/* 4. SECCIÓN PROYECTOS Y CARDS */
+.node-title {
+    border-left: 5px solid var(--neon-green);
+    padding-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #30363d;
+    color: var(--text-main);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--neon-green);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* 5. BOTONES DE FILTRO (SUBMENÚ) */
+.btn-filter {
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-filter:hover {
+    background-color: var(--neon-green);
+    color: #0b0f19;
+}
+
+/* 6. RESPONSIVIDAD MÓVIL */
+@media (max-width: 768px) {
+    .display-3 { font-size: 2.5rem; }
+    .hero-section { text-align: center; }
+}
